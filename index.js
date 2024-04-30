@@ -9,7 +9,7 @@ require("./database/index");
 require("./strategy/local");
 
 app.use(cors({
-  origin: ['https://navigatorsyouth.netlify.app', 'http://localhost:3000'],
+  origin: ['https://navigatorsyouth.netlify.app', 'http://localhost:3000', 'https://66316e5d2cb0ff3842aac139--euphonious-empanada-041386.netlify.app'],
   credentials: true
 }));
 
