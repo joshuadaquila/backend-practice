@@ -19,7 +19,7 @@ app.use(session({
   secret: "joshuadaq",
   saveUninitialized: false,
   resave: false,
-  cookie: { httpOnly: false },
+  cookie: { httpOnly: false, sameSite: "none" },
   store: MongoStore.create({
     mongoUrl: "mongodb+srv://joshuadaq:Scribbles24.@cluster0.59wsybx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   })
