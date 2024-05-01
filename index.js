@@ -39,6 +39,7 @@ app.listen(PORT, () => {
 
 app.post("/login", passport.authenticate('local'), (req, res) => {
   console.log("Logged in");
+  console.log(res.headers);
   res.sendStatus(200);
 });
 
