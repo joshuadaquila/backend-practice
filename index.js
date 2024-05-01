@@ -39,7 +39,7 @@ app.listen(PORT, () => {
 
 app.post("/login", passport.authenticate('local'), (req, res) => {
   console.log("Logged in");
-  console.log(res.headers);
+  console.log("Set-Cookie header:", res.getHeaders()['set-cookie']);
   res.sendStatus(200);
 });
 
