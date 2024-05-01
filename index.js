@@ -39,9 +39,10 @@ app.listen(PORT, () => {
 
 app.post("/login", passport.authenticate('local'), (req, res) => {
   console.log("Logged in");
-  console.log("Set-Cookie header:", res.getHeaders()['set-cookie']);
+  res.cookie('testCookie', 'testValue', { sameSite: 'none', secure: true }); // Manually set a test cookie
   res.sendStatus(200);
 });
+
 
 app.use((req, res, next) => {
   console.log("req data", req.user);
